@@ -1,2 +1,10 @@
-// TODO: Javascript Closure with IIFE 
-console.log("Hello World")
+// TODO: Javascript Closure with IIFE (Immediately Invoked Function Expression)
+const privateCounter = (() => {
+    let count = 0
+    console.log(`initial value ${count}`)
+    return () => { count += 1; console.log(count) }
+})();
+
+privateCounter();
+privateCounter();
+privateCounter();
